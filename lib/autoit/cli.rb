@@ -4,12 +4,12 @@ module Autoit
   # Module to supports CLI commands
   class CLI < Thor
 
-    desc "migrate INPUT", "Migrate folder or XML file to spreadsheet format"
+    desc "install INPUT", "Install Platform"
     long_desc <<-D
-      'migrate INPUT' Migrate a file or folder with XML files exported from TesLink to spreadsheet HP Quality Center format.
+      'install INPUT' Install platform on Windows.
     D
     option :format
-    def migrate(input)
+    def install(input)
       #require "qaxqa/cli/migrate"
       Migrate.new.run(input)
     end

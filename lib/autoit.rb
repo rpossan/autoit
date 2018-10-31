@@ -1,5 +1,5 @@
 require "autoit/version"
+require "autoit/control"
+module AutoIt
 
-module Autoit
-  # Your code goes here...
 end
