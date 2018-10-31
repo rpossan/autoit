@@ -13,4 +13,9 @@ class Control
     win.run app
   end
 
+  def click_on(screen, text=nil, id)
+    win.WinWaitActive(screen, nil, 30)
+    win.ControlClick(screen, text, id)
+  end
+
 end

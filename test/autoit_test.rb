@@ -2,6 +2,7 @@ require "test_helper"
 require "byebug"
 
 class AutoitTest < Minitest::Test
+  i_suck_and_my_tests_are_order_dependent! 
   
   include AutoIt
   
@@ -11,11 +12,23 @@ class AutoitTest < Minitest::Test
     refute_nil ::Autoit::VERSION
   end
 
-  def test_ai_is_ai
+  def test_control_is_contol
     assert_equal @@control.class, Control
   end
-
+  
   def test_open_app
     assert @@control.open_app("calc") > 1
   end
+
+  def test_not_open_app
+    refute @@control.open_app("foo") > 1
+  end
+
+  def test_sum
+    @@control.click_on "Calculator", "5", "[ID:135]"
+    @@control.click_on "Calculator", "+", "[ID:135]"
+    @@control.click_on "Calculator", "5", "[ID:135]"
+    #asset @@control.has_text("15")
+  end
+
 end
