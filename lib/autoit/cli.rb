@@ -10,8 +10,7 @@ module Autoit
     D
     option :format
     def install(input)
-      #require "qaxqa/cli/migrate"
-      Migrate.new.run(input)
+      system "vendor/register.bat"
     end
   end
 

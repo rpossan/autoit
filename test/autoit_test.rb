@@ -26,9 +26,10 @@ class AutoitTest < Minitest::Test
 
   def test_sum
     @@control.click_on "Calculator", "5", "[ID:135]"
-    @@control.click_on "Calculator", "+", "[ID:135]"
+    @@control.click_on "Calculator", "+", "[ID:93]"
     @@control.click_on "Calculator", "5", "[ID:135]"
-    #asset @@control.has_text("15")
+    @@control.click_on "Calculator", "=", "[ID:121]"
+    assert @@control.has_text?("Calculator", "10", true)
   end
 
 end
