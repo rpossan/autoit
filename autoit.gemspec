@@ -10,14 +10,14 @@ Gem::Specification.new do |spec|
   spec.email         = ["ronaldo.possan@gmail.com"]
 
   spec.summary       = "A ruby gem wrapper to interface with AutoIt"
-  spec.description   = "An interface to execute and automate Windows platform with AutoIt"
+  spec.description   = "[ALPHA VERSION - Not completed!] An interface to execute and automate Windows platform with AutoIt"
   spec.homepage      = "https://github.com/rpossan/autoit"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
   if spec.respond_to?(:metadata)
-    spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
+    #spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
     spec.metadata["homepage_uri"] = spec.homepage
     spec.metadata["source_code_uri"] = "https://github.com/rpossan/autoit"
     spec.metadata["changelog_uri"] = "https://github.com/rpossan/autoit/blob/master/CHANGELOG.md"
