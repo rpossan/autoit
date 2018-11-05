@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["ronaldo.possan@gmail.com"]
 
   spec.summary       = "A ruby gem wrapper to interface with AutoIt"
-  spec.description   = "An interface to execute and automate Windows platform with AutoIt"
+  spec.description   = "[ALPHA VERSION - Not completed!] An interface to execute and automate Windows platform with AutoIt"
   spec.homepage      = "https://github.com/rpossan/autoit"
   spec.license       = "MIT"
 

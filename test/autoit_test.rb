@@ -32,4 +32,8 @@ class AutoitTest < Minitest::Test
     assert @@control.has_text?("Calculator", "10", true)
   end
 
+  def test_command
+    @@control.command("run", "calc")
+  end
+
 end

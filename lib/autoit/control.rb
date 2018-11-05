@@ -9,6 +9,10 @@ class Control
     @win = WIN32OLE.new('AutoItX3.Control')
   end
 
+  def command(cmd, opt)
+    win.send(cmd, opt)
+  end
+
   def open_app(app)
     win.run app
   end
