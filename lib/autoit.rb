@@ -1,5 +1,5 @@
-require "autoit/version"
-require "autoit/control"
+require 'autoit/version'
+require 'autoit/control'
 
 module AutoIt
 

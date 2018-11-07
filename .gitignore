@@ -6,3 +6,5 @@
 /pkg/
 /spec/reports/
 /tmp/
+/rubocop.html
+/.byebug_history
