@@ -3,7 +3,7 @@ require "byebug"
 
 class ControlTest < Minitest::Test
   i_suck_and_my_tests_are_order_dependent!
-  
+
   include AutoIt
 
   def setup
@@ -13,7 +13,7 @@ class ControlTest < Minitest::Test
   def test_control_is_contol
     assert_equal @control.class, Control
   end
-  
+
   def test_open_app
     assert @control.open_app("calc")
     @control.win_close "Calculator"
