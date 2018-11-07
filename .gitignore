@@ -7,3 +7,5 @@
 /spec/reports/
 /tmp/
 Gemfile.lock
+/rubocop.html
+/.byebug_history

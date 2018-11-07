@@ -1,8 +1,8 @@
-## 0.1.0 (2018-10-18)
+## 0.3.0 (2018-11-06)
 
 Changes:
 
-  - Built the gem strucuture and first commit.
+  - command method to run native AutoIt commands
 
 Bugfixes:
 
