@@ -5,8 +5,8 @@ require 'autoit/version'
 Gem::Specification.new do |spec|
   spec.name          = 'autoit'
   spec.version       = Autoit::VERSION
-  spec.authors       = ['Ronaldo Possan']
-  spec.email         = ['ronaldo.possan@gmail.com']
+  spec.authors       = ['Ronaldo Possan', 'Fabio Valonga']
+  spec.email         = ['ronaldo.possan@gmail.com', 'fabiosv.etep@gmail.com']
   spec.summary       = 'A ruby gem wrapper to interface with AutoIt'
   spec.description   = 'An interface to execute and automate Windows platform\
                         using AutoIt'
