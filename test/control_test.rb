@@ -40,4 +40,15 @@ class ControlTest < Minitest::Test
     assert @control.text?('Calculator', '8', true)
     @control.win_close 'Calculator'
   end
+
+  def test_win_activate
+    assert @control.open_app 'calc'
+    assert @control.open_app 'notepad'
+    assert @control.window_activate 'Calculator'
+    assert @control.window_activate 'Notepad'
+    assert @control.window_activate 'Calculator'
+    assert @control.window_active? 'Calculator'
+    @control.win_close 'Calculator'
+    @control.win_close 'Notepad'
+  end
 end
