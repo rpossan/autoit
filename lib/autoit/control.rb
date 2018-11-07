@@ -2,10 +2,11 @@
 require 'win32ole'
 
 class Control
-  
+
   attr_reader :win
 
   def initialize
+    # dll = RUBY_PLATFORM.include? 'x64' ? a : b
     @win = WIN32OLE.new('AutoItX3.Control')
   end
 
@@ -32,4 +33,10 @@ class Control
     found == text
   end
 
+  # Use to activate an opened window
+  # title: The title/hWnd/class of the window to activate.
+  # text: [optional] The text of the window to activate. Default is an empty string.
+  def window_activate(title, text=nil)
+    win.WinActivate(title, text)
+  end
 end
