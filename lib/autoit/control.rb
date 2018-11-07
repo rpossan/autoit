@@ -11,7 +11,7 @@ module AutoIt
     end
 
     def command(cmd, args={})
-      win.send(cmd, *args)
+      execute { win.send(cmd, *args) }
     end
 
     def win_close(title)
