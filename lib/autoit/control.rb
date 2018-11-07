@@ -43,9 +43,19 @@ module AutoIt
 
     # Use to activate an opened window
     # title: The title/hWnd/class of the window to activate.
-    # text: [optional] The text of the window to activate. Default is an empty string.
-    def window_activate(title, text=nil)
-      win.WinActivate(title, text)
+    # text: [optional] The text of the window to activate. Default is an empty
+    # string.
+    def window_activate(title, text = nil)
+      win.WinActivate(title, text).nil?
+    end
+
+    # Check if a windows is active or not
+    # title: The title/hWnd/class of the window to activate.
+    # text: [optional] The text of the window to activate. Default is an empty
+    # string.
+    # return: true or false
+    def window_active?(title, text = nil)
+      win.WinActive(title, text)
     end
 
     private
