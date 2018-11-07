@@ -1,16 +1,18 @@
-#require 'Win32API'
+# require 'Win32API'
 require 'win32ole'
 
 module AutoIt
+  # Class module to execute control commands on AutoIt DLL. Its possible
+  # to run native commands and some methods for object
   class Control
-    
+
     attr_reader :win
 
     def initialize
       @win = WIN32OLE.new('AutoItX3.Control')
     end
 
-    def command(cmd, args={})
+    def command(cmd, args = {})
       execute { win.send(cmd, *args) }
     end
 
@@ -22,7 +24,7 @@ module AutoIt
       execute { win.run app }
     end
 
-    def click_on(title, text=nil, id)
+    def click_on(title, id, text = nil)
       execute do
         win.WinWaitActive(title, nil, 30)
         win.ControlClick(title, text, id)

@@ -8,7 +8,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Ronaldo Possan']
   spec.email         = ['ronaldo.possan@gmail.com']
   spec.summary       = 'A ruby gem wrapper to interface with AutoIt'
-  spec.description   = 'An interface to execute and automate Windows platform with AutoIt'
+  spec.description   = 'An interface to execute and automate Windows platform\
+                        using AutoIt'
   spec.homepage      = 'https://github.com/rpossan/autoit'
   spec.license       = 'MIT'
 
@@ -22,9 +23,11 @@ Gem::Specification.new do |spec|
   end
 
   spec.files = Dir.chdir(File.expand_path(__dir__)) do
-    `git ls-files -z`.split('\x0').reject { |f| f.match(%r{^(test|spec|features)/}) }
+    `git ls-files -z`.split('\x0').reject do |f|
+      f.match(%r{^(test|spec|features)/})
+    end
   end
-  
+
   spec.bindir        = 'exe'
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']

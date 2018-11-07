@@ -24,10 +24,10 @@ class ControlTest < Minitest::Test
   end
 
   def test_sum
-    @control.click_on "Calculator", "5", "[ID:135]"
-    @control.click_on "Calculator", "+", "[ID:93]"
-    @control.click_on "Calculator", "5", "[ID:135]"
-    @control.click_on "Calculator", "=", "[ID:121]"
+    @control.click_on("Calculator", "[ID:135]", "5")
+    @control.click_on("Calculator", "[ID:93]", "+")
+    @control.click_on("Calculator", "[ID:135]", "5")
+    @control.click_on("Calculator", "[ID:121]", "=")
     assert @control.has_text?("Calculator", "10", true)
     @control.win_close "Calculator"
   end
