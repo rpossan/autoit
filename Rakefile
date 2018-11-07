@@ -8,7 +8,8 @@ Rake::TestTask.new(:test) do |t|
 
   desc 'Run Rubocop analysis and open in the browser'
   task :rubocop do
-    system 'rubocop -f html -o rubocop.html & start chrome rubocop.html'
+    system "rubocop -f html -o rubocop.html -c rubocop.yml &\
+    start chrome rubocop.html"
   end
 end
 

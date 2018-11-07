@@ -1,5 +1,5 @@
-require "test_helper"
-require "byebug"
+require 'test_helper'
+require 'byebug'
 
 class ControlTest < Minitest::Test
   i_suck_and_my_tests_are_order_dependent!
@@ -15,30 +15,29 @@ class ControlTest < Minitest::Test
   end
 
   def test_open_app
-    assert @control.open_app("calc")
-    @control.win_close "Calculator"
+    assert @control.open_app('calc')
+    @control.win_close 'Calculator'
   end
 
   def test_not_open_app
-    refute @control.open_app("foo")
+    refute @control.open_app('foo')
   end
 
   def test_sum
-    @control.click_on("Calculator", "[ID:135]", "5")
-    @control.click_on("Calculator", "[ID:93]", "+")
-    @control.click_on("Calculator", "[ID:135]", "5")
-    @control.click_on("Calculator", "[ID:121]", "=")
-    assert @control.has_text?("Calculator", "10", true)
-    @control.win_close "Calculator"
+    @control.click_on('Calculator', '[ID:135]', '5')
+    @control.click_on('Calculator', '[ID:93]', '+')
+    @control.click_on('Calculator', '[ID:135]', '5')
+    @control.click_on('Calculator', '[ID:121]', '=')
+    assert @control.text?('Calculator', '10', true)
+    @control.win_close 'Calculator'
   end
 
   def test_command
-    args = ["Calculator", "8", "[ID:138]"]
-    @control.command("run", ["calc"])
-    @control.command("WinWaitActive", ["Calculator", nil, 30])
-    @control.command("ControlClick", args)
-    assert @control.has_text?("Calculator", "8", true)
-    @control.win_close "Calculator"
+    args = ['Calculator', '8', '[ID:138]']
+    @control.command('run', ['calc'])
+    @control.command('WinWaitActive', ['Calculator', nil, 30])
+    @control.command('ControlClick', args)
+    assert @control.text?('Calculator', '8', true)
+    @control.win_close 'Calculator'
   end
-
 end
