@@ -1,4 +1,4 @@
-$LOAD_PATH.unshift File.expand_path("../../lib", __FILE__)
-require "autoit"
+$LOAD_PATH.unshift File.expand_path('../lib', __dir__)
+require 'autoit'
 
-require "minitest/autorun"
+require 'minitest/autorun'
