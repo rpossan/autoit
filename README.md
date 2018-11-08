@@ -1,15 +1,13 @@
-# Autoit
-
 ![AutoIt Logo](https://www.autoitscript.com/images/logo_autoit_210x72@2x.png "AutoIt Logo")Ruby Version
 
 #
-1. [Gem](#Gem)
-1.2 [Installation](installation)
-1.3 [Usage](#usage)
-2. [Development](#dev)
-3. [Contributing](#contributing)
-4. [License](#license)
-5. [Support](#support)
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [Development](#devopment)
+4. [Contributing](#contributing)
+5. [License](#license)
+5. [Code of Conduct](#code)
+6. [Support](#support)
 
 ## Installation
 
@@ -27,9 +25,27 @@ Or install it yourself as:
 
     $ gem install autoit
 
+AutoIt Installation:
+
+AutoIt gem has a executable 'autoit' with the command 'install' to install the AutoIt DLL's for Operating System 32 or 64 bits.
+
+You can install autoit manually by yourself following the instructions: https://www.autoitscript.com/site/autoit/downloads/
+
+If you have already installed AutoIt DLLs on your system ignore this step.
+
+DLLs are located on: https://github.com/rpossan/autoit/tree/master/vendor
+
+```sh
+$ autoit install
+```
+
+System will ask for Administrator access. Click on "Yes" to register the properly DLL on your system register.
+
+![](https://github.com/rpossan/files/blob/master/autoit/autoit_install.gif)
+
 ## Usage
 
-TODO: Write usage instructions here
+
 
 ## Development
 
