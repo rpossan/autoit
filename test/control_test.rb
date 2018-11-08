@@ -42,9 +42,9 @@ class ControlTest < Minitest::Test
   end
 
   def test_win_activate
-    assert @control.open_app 'calc'
+    refute @control.window_exists? 'Calculator'
     assert @control.open_app 'notepad'
-    assert @control.window_activate 'Calculator'
+    assert @control.open_app 'calc'
     assert @control.window_activate 'Notepad'
     assert @control.window_activate 'Calculator'
     assert @control.window_active? 'Calculator'
