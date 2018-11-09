@@ -54,8 +54,9 @@ module AutoIt
     # text: [optional] The text of the window to activate. Default is an empty
     # string.
     # return: true or false
-    def window_active?(title, text = nil)
-      win.WinActive(title, text) != 0
+    def window_active?(title, text = '')
+      sleep 3
+      execute { win.WinActive(title, text) }
     end
 
     # Check if a windows exists or not
@@ -63,7 +64,8 @@ module AutoIt
     # text: [optional] The text of the window to activate. Default is an empty
     # string.
     # return: true or false
-    def window_exists?(title, text = nil)
+    def window_exists?(title, text = '')
+      sleep 3
       execute { win.WinExists(title, text) }
     end
 
