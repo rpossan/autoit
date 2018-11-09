@@ -6,27 +6,11 @@ require "autoit/version"
   spec.version       = Autoit::VERSION
   spec.authors       = ["Ronaldo Possan"]
   spec.email         = ["ronaldo.possan@gmail.com"]
-
-  spec.summary       = <<-EOF
-AutoIt is a gem to handle and integrate Windows Automation in your project and tests using the AutoIt software and Windows OLE
-objects. With AutoIt gem you can run easily wrapper methods or run natives AutoIt commands.
-Enjoy this awesome project together. Use, review, contribute and give us a STAR!
-  EOF
-
+  spec.summary       = "A ruby gem to handle Windows objects with AutoIT for Automation and Tests projects."
   spec.description   = <<-EOF
 AutoIt is a gem to integrate in your automation project and tests using the AutoIt software for interact with Windows OLE
-objects. With AutoIt gem you can run the easy wrapper methods or run natives AutoIt commands.
-
-We are building a new concept to match Windows elements called WPath. Yes, this is similar to the known XPath and we are
-trying to bring this feature to easily find elements on the screen. For example: `//Calculator/Button[@id=135]` will match an
-element on the screen with title "Calculator", with class Button and ID 135.
-
-We recommend to build a project structure using BDD Cucumber (http://cucumber.io) with the gem BDDFire (https://github.com/Shashikant86/bddfire)
-to have a complete and full of features tool for your automation project focused highly on your business, not just in code.
-
-Enjoy this awesome project together. Use, review, contribute and give us a STAR!
+bjects. With AutoIt gem you can run the easy wrapper methods or run natives AutoIt commands.
 EOF
-
   spec.homepage      = "https://github.com/rpossan/autoit"
   spec.license       = "MIT"
    # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
