@@ -1,8 +1,8 @@
 ![AutoIt Logo](https://www.autoitscript.com/images/logo_autoit_210x72@2x.png "AutoIt Logo")Ruby Version
 
 #
-AutoIt is a gem to integrate in your automation project and tests using the AutoIt software for interact with Windows OLE
-objects. With AutoIt gem you can run the easy wrapper methods or run natives AutoIt commands.
+AutoIt is a gem to handle and integrate Windows Automation in your project and tests using the AutoIt software and Windows OLE
+objects. With AutoIt gem you can run easily wrapper methods or run natives AutoIt commands.
 
 >We are building a new concept to match Windows elements called WPath. Yes, this is similar to the known XPath and we are
 trying to bring this feature to easily find elements on the screen. For example: `//Calculator/Button[@id=135]` will match an
