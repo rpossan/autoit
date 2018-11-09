@@ -12,6 +12,9 @@ We recommend to build a project structure using BDD Cucumber (http://cucumber.io
 
 Enjoy this awesome project together. Use, review, contribute and give us a <a class="github-button" href="https://github.com/rpossan/autoit" data-icon="octicon-star" aria-label="Star rpossan/autoit on GitHub">STAR</a>!
 
+See its running on IRB (Interactive Ruby mode):
+![](https://github.com/rpossan/files/blob/master/autoit/autoit_irb.gif)
+
 1. [Installation](#1---installation)
 2. [Usage](#2---usage)
 3. [Basics - Getting started](#3---basics---getting-started)
@@ -79,7 +82,7 @@ This example of use is exaclty as AutoIt ControlClick funtcion documentation: ht
 
 Using ruby wrapper methods:
 
->_This is UNDER construction - Keep your autoit gem up to date to get all features)_
+>_This is UNDER construction - Keep your autoit gem up to date to get all features_
 ```ruby
 # Open app and run executables
 control.open_app('calc') # open Windows calculator. Can be a executable or path to an .exe file
@@ -124,9 +127,6 @@ my_control.command('WinWaitActive', ['Calculator', nil, 30]) # Execute AutoIt na
 my_control.command('ControlClick', key_8) # Execute AutoIt native ControlClick clicking with key_8 variable args
 my_control.command('WinClose', ['Calculator']) # Close window passing the title
 ```
-
-See its running on IRB (Interactive Ruby mode):
-![](https://github.com/rpossan/files/blob/master/autoit/autoit_irb.gif)
 
 ## 3 - Basics - Getting started
 
