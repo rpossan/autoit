@@ -1,5 +1,3 @@
-<!-- Place this tag in your head or just before your close body tag. -->
-<script async defer src="https://buttons.github.io/buttons.js"></script>
 ![AutoIt Logo](https://www.autoitscript.com/images/logo_autoit_210x72@2x.png "AutoIt Logo")Ruby Version
 
 #
