@@ -28,7 +28,7 @@ class ControlTest < Minitest::Test
     @control.click_on('Calculator', '[ID:93]', '+')
     @control.click_on('Calculator', '[ID:135]', '5')
     @control.click_on('Calculator', '[ID:121]', '=')
-    assert @control.text?('Calculator', '10', true)
+    assert @control.has_int?('Calculator', 10)
     @control.win_close 'Calculator'
   end
 
@@ -37,7 +37,7 @@ class ControlTest < Minitest::Test
     @control.command('run', ['calc'])
     @control.command('WinWaitActive', ['Calculator', nil, 30])
     @control.command('ControlClick', args)
-    assert @control.text?('Calculator', '8', true)
+    assert @control.has_int?('Calculator', 8)
     @control.win_close 'Calculator'
   end
 

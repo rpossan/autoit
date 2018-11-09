@@ -35,10 +35,14 @@ module AutoIt
       win.WinGetText(title)
     end
 
-    def text?(title, text, get_int = false)
+    def has_int?(title, value)
       found = get_text title
-      found = text.to_i.to_s if get_int
-      found == text
+      found.to_i == value
+    end
+
+    def has_text?(title, text)
+      found = get_text title
+      found.to_s.chomp == text.to_s
     end
 
     # Use to activate an opened window
