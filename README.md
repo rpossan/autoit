@@ -161,6 +161,15 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/rpossan/autoit. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
+[![](https://sourcerer.io/fame/fabiosv/rpossan/autoit/images/0)](https://sourcerer.io/fame/fabiosv/rpossan/autoit/links/0)
+[![](https://sourcerer.io/fame/fabiosv/rpossan/autoit/images/1)](https://sourcerer.io/fame/fabiosv/rpossan/autoit/links/1)
+[![](https://sourcerer.io/fame/fabiosv/rpossan/autoit/images/2)](https://sourcerer.io/fame/fabiosv/rpossan/autoit/links/2)
+[![](https://sourcerer.io/fame/fabiosv/rpossan/autoit/images/3)](https://sourcerer.io/fame/fabiosv/rpossan/autoit/links/3)
+[![](https://sourcerer.io/fame/fabiosv/rpossan/autoit/images/4)](https://sourcerer.io/fame/fabiosv/rpossan/autoit/links/4)
+[![](https://sourcerer.io/fame/fabiosv/rpossan/autoit/images/5)](https://sourcerer.io/fame/fabiosv/rpossan/autoit/links/5)
+[![](https://sourcerer.io/fame/fabiosv/rpossan/autoit/images/6)](https://sourcerer.io/fame/fabiosv/rpossan/autoit/links/6)
+[![](https://sourcerer.io/fame/fabiosv/rpossan/autoit/images/7)](https://sourcerer.io/fame/fabiosv/rpossan/autoit/links/7)
+
 ## 6 - License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).

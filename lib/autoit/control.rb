@@ -8,6 +8,7 @@ module AutoIt
     attr_reader :win
 
     def initialize
+      # dll = RUBY_PLATFORM.include? 'x64' ? a : b
       @win = WIN32OLE.new('AutoItX3.Control')
     end
 
@@ -43,6 +44,34 @@ module AutoIt
     def has_text?(title, text)
       found = get_text title
       found.to_s.chomp == text.to_s
+    end
+
+    # Use to activate an opened window
+    # title: The title/hWnd/class of the window to activate.
+    # text: [optional] The text of the window to activate. Default is an empty
+    # string.
+    def window_activate(title, text = nil)
+      win.WinActivate(title, text).nil?
+    end
+
+    # Check if a windows is active or not
+    # title: The title/hWnd/class of the window to activate.
+    # text: [optional] The text of the window to activate. Default is an empty
+    # string.
+    # return: true or false
+    def window_active?(title, text = '')
+      sleep 3
+      execute { win.WinActive(title, text) }
+    end
+
+    # Check if a windows exists or not
+    # title: The title/hWnd/class of the window to activate.
+    # text: [optional] The text of the window to activate. Default is an empty
+    # string.
+    # return: true or false
+    def window_exists?(title, text = '')
+      sleep 3
+      execute { win.WinExists(title, text) }
     end
 
     private

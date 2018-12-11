@@ -2,27 +2,27 @@ lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "autoit/version"
  Gem::Specification.new do |spec|
-  spec.name          = "autoit"
+  spec.name          = 'autoit'
   spec.version       = Autoit::VERSION
-  spec.authors       = ["Ronaldo Possan"]
-  spec.email         = ["ronaldo.possan@gmail.com"]
-  spec.summary       = "A ruby gem to handle Windows objects with AutoIT for Automation and Tests projects."
+  spec.authors       = ['Ronaldo Possan', 'Fabio Valonga']
+  spec.email         = ['ronaldo.possan@gmail.com', 'fabiosv.etep@gmail.com']
+  spec.summary       = 'A ruby gem wrapper to interface with AutoIt'
   spec.description   = <<-EOF
-AutoIt is a gem to integrate in your automation project and tests using the AutoIt software for interact with Windows OLE
-bjects. With AutoIt gem you can run the easy wrapper methods or run natives AutoIt commands.
-EOF
-  spec.homepage      = "https://github.com/rpossan/autoit"
-  spec.license       = "MIT"
-   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
+    AutoIt is a gem to integrate in your automation project and tests using the AutoIt software for interact with
+    Windows OLE objects. With AutoIt gem you can run the easy wrapper methods or run natives AutoIt commands.
+  EOF
+  spec.homepage      = 'https://github.com/rpossan/autoit'
+  spec.license       = 'MIT'
+  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
   if spec.respond_to?(:metadata)
     #spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
-    spec.metadata["homepage_uri"] = spec.homepage
-    spec.metadata["source_code_uri"] = "https://github.com/rpossan/autoit"
-    spec.metadata["changelog_uri"] = "https://github.com/rpossan/autoit/blob/master/CHANGELOG.md"
+    spec.metadata['homepage_uri'] = spec.homepage
+    spec.metadata['source_code_uri'] = "https://github.com/rpossan/autoit"
+    spec.metadata['changelog_uri'] = "https://github.com/rpossan/autoit/blob/master/CHANGELOG.md"
   else
-    raise "RubyGems 2.0 or newer is required to protect against " \
-      "public gem pushes."
+    raise 'RubyGems 2.0 or newer is required to protect against ' \
+      'public gem pushes.'
   end
    # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
