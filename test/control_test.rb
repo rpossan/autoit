@@ -18,9 +18,11 @@ class ControlTest < Minitest::Test
     assert @control.open_app('calc')
     @control.win_close 'Calculator'
   end
-
+  
   def test_not_open_app
     refute @control.open_app('foo')
+    error = assert_raises(RuntimeError) { @control.open_app nil }
+    assert_equal error.message, "Parameter: '' is invalid!"
   end
 
   def test_sum
@@ -39,5 +41,7 @@ class ControlTest < Minitest::Test
     @control.command('ControlClick', args)
     assert @control.has_int?('Calculator', 8)
     @control.win_close 'Calculator'
+    error = assert_raises(RuntimeError) {  @control.command('run', nil) }
+    error = assert_raises(RuntimeError) {  @control.command('run') }
   end
 end

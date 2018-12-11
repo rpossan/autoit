@@ -20,6 +20,7 @@ module AutoIt
     end
 
     def open_app(app)
+      raise "Parameter: '#{app}' is invalid!" if app.nil? || app.empty?
       execute { win.run app }
     end
 
@@ -47,7 +48,7 @@ module AutoIt
     private
 
     def execute
-      yield > 0
+        yield > 0
     end
   end
 end

@@ -159,7 +159,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## 5 - Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/autoit. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/rpossan/autoit. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## 6 - License
 
@@ -167,7 +167,7 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## 7 - Code of Conduct
 
-Everyone interacting in the Autoit project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/autoit/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Autoit project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/rpossan/autoit/blob/master/CODE_OF_CONDUCT.md).
 
 
 ## 8 - Support
