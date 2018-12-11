@@ -1,15 +1,15 @@
-## 1.0.0 (2018-11-09)
+## 1.3.2 (2018-12-12)
 
 Changes:
 
-  - Released first functional version using natives commands. Check this on README file.
-  - Implemented a built-in executable to install AutoIt DLLS on your OS: autoit install
-  - Wrapper methods to check texts and integers, to open app, close windows, open apps and clicks on
-  - command method to run native AutoIt commands
+  - Bug fixes and documentation.
 
 Bugfixes:
 
-  - Nothing
+  - Fixes the 'open_app' method passing empty string or nil resulting in
+  ruby interpreter crash. Now it has a treatment to check the arguments before
+  call the command. It works for open_app method and native commands.
+  - Fixes the broken URLS in README.
 
 Documentation:
 
