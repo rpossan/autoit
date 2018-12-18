@@ -12,7 +12,12 @@ module Autoit
     D
     option :format
     def install
-      system "#{Dir.pwd}\\vendor\\register#{OS.bits}.bat"
+      path = "#{File.dirname(__FILE__)}\\..\\..\\vendor\\register#{OS.bits}.bat"
+      if File.file? path
+        system path
+      else
+        puts "Installation script not found on: [#{path}] Please, open an issue: https://github.com/rpossan/autoit/issues/new"
+      end
     end
   end
 end
