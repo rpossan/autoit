@@ -12,7 +12,7 @@ module Autoit
     D
     option :format
     def install
-      system "vendor\\register#{OS.bits}.bat"
+      system "#{Dir.pwd}\\vendor\\register#{OS.bits}.bat"
     end
   end
 end
