@@ -77,7 +77,7 @@ module AutoIt
     private
 
     def execute
-        yield > 0
+        yield
     end
   end
 end
