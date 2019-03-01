@@ -74,10 +74,69 @@ module AutoIt
       execute { win.WinExists(title, text) }
     end
 
+    # Activates (gives focus to) a window.
+    # title: The title/hWnd/class of the window to activate.
+    def winActivate(*args)
+      if args == 1
+        command'WinActivate', [args[0]]
+      elsif args == 2
+        command'WinActivate', [args[0], args[1]]
+      end
+    end
+
+    # Closes a window.
+    # title: The title/hWnd/class of the window to activate.
+    def winClose (title)
+      command'WinClose', [title]
+    end
+
+    # Sets input focus to a given control on a window.
+    # title: The title of the window to access.
+    # text: The text of the window to access.
+    # control: The control to interact with.
+    def controlFocus(title, text, control)
+      command 'ControlFocus', [title, text, control]
+    end
+
+    # Sends simulated keystrokes to the active window.
+    # keys: The sequence of keys to send.
+    def send keys
+      command 'Send', [keys, 1]
+    end
+
+    # Sets selection according to string in a ListBox or ComboBox
+    # title: The title of the window to access.
+    # text: The text of the window to access.
+    # control: The control to interact with.
+    # string: The string.
+    def controlCommandSelectString(title, text, control, string)
+      command 'ControlCommand', [title, text, control, 'SelectString', string]
+    end
+
+    # Sets text of a control.
+    # Sends a string of characters to a control.
+    # title: The title of the window to access.
+    # text: The text of the window to access.
+    # control: The control to interact with.
+    # string: The string.
+    def ControlSetText(title, text, control, value)
+      command'ControlSetText', [title, text, control, value]
+    end
+    # Sends a mouse click command to a given control.
+    # title The title of the window to access.
+    # text The text of the window to access.
+    # controlID The control to interact with.
+    # button The button to click, "left", "right" or "middle".
+    # clicks The number of times to click the mouse. Default is center.
+    # x The x position to click within the control. Default is center.
+    # y The y position to click within the control. Default is center.
+    def ControlClick(title, text, control, button, clicks, x, y)
+      command("ControlClick", [title, text, control, button, clicks, x, y])
+    end
     private
 
     def execute
-        yield
+      yield
     end
   end
 end
