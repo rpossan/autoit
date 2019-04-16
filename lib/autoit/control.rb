@@ -16,6 +16,10 @@ module AutoIt
       execute { win.send(cmd, *args) }
     end
 
+    def command_validate(cmd, args={})
+      execute_validate{win.send(cmd. *args)}
+    end
+
     def win_close(title)
       execute { win.WinClose title }
     end
@@ -74,10 +78,96 @@ module AutoIt
       execute { win.WinExists(title, text) }
     end
 
+    # Activates (gives focus to) a window.
+    # @param: title: The title/hWnd/class of the window to activate.
+    def win_activate(*args)
+      if args == 1
+        command'WinActivate', [args[0]]
+      elsif args == 2
+        command'WinActivate', [args[0], args[1]]
+      end
+    end
+
+    # Sets input focus to a given control on a window.
+    # @param: title: The title of the window to access.
+    # @param: text: The text of the window to access.
+    # @param: control: The control to interact with.
+    def control_focus(title, text, control)
+      command 'ControlFocus', [title, text, control]
+    end
+
+    # Sends simulated keystrokes to the active window.
+    # keys: The sequence of keys to send.
+    def send keys
+      command 'Send', [keys, 1]
+    end
+
+    # Sets selection according to string in a ListBox or ComboBox
+    # @param: title: The title of the window to access.
+    # @param: text: The text of the window to access.
+    # @param: control: The control to interact with.
+    # @param: string: The string.
+    def control_command_select_string(title, text, control, string)
+      command 'ControlCommand', [title, text, control, 'SelectString', string]
+    end
+
+    # Drops a ComboBox
+    # @param: title: The title of the window to access.
+    # @param: text: The text of the window to access.
+    # @param: control: The control to interact with.
+    def control_command_show_drop_down(title, text, control)
+      command 'ControlCommand', [title, text, control, 'ShowDropDown', '']
+    end
+
+    # Undrops a ComboBox
+    # @param: title: The title of the window to access.
+    # @param: text: The text of the window to access.
+    # @param: control: The control to interact with.
+    def control_command_hide_drop_down(title, text, control)
+      command 'ControlCommand', [title, text, control, 'HideDropDown', '']
+    end
+
+    # Sets text of a control.
+    # Sends a string of characters to a control.
+    # @param: title: The title of the window to access.
+    # @param: text: The text of the window to access.
+    # @param: control: The control to interact with.
+    # @param: string: The string.
+    # @return True if success, false otherwise
+    def control_set_text(title, text, control, value)
+      command_validate'ControlSetText', [title, text, control, value]
+    end
+
+    # Sends a mouse click command to a given control.
+    # @param: title: The title of the window to access.
+    # @param: text: The text of the window to access.
+    # @param: controlID: The control to interact with.
+    # @param: button: The button to click, "left", "right" or "middle".
+    # @param: clicks: The number of times to click the mouse. Default is center.
+    # @param: x: The x position to click within the control. Default is center.
+    # @param: y: The y position to click within the control. Default is center.
+    # @return: True if success, false otherwise.
+    def control_click(title, text, control, button, clicks, x, y)
+      command_validate('ControlClick', [title, text, control, button, clicks, x, y])
+    end
+
+    # Sets selection to occurrence ref in a ListBox or ComboBox.
+    # @param: title: The title of the window to access.
+    # @param: text: The text of the window to access.
+    # @param: control: The control to interact with.
+    # @param: occurrance: the value.
+    def control_command_set_current_selection(title, text, control, occurrance)
+      command('ControlCommand', [title, text, control, 'SetCurrentSelection', occurrance])
+    end
+
     private
 
     def execute
-        yield > 0
+      yield
+    end
+
+    def execute_validate
+      yield > 0
     end
   end
 end
